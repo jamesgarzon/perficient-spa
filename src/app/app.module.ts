@@ -8,6 +8,12 @@ import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+const devImports = [];
+if (!environment.production) {
+  devImports.push(StoreDevtoolsModule.instrument());
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +31,9 @@ import { environment } from '../environments/environment';
       registrationStrategy: 'registerWhenStable:30000',
     }),
     BrowserTransferStateModule,
+
+    // dev import
+    ...devImports,
   ],
   providers: [],
   bootstrap: [AppComponent],
