@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FeaturesConfig, OccConfig, provideConfig, SiteContextConfig } from '@spartacus/core';
-import { defaultCmsContentProviders, layoutConfig, mediaConfig } from '@spartacus/storefront';
+import { defaultCmsContentProviders, mediaConfig } from '@spartacus/storefront';
 import { PrfI18nConfig } from './config/i18n.config';
 import { environment } from '../../environments/environment';
 import { PrfIconConfig } from './config/icon.config';
+import { prfLayoutConfig } from './config/layout-config';
 
 const occConfig: OccConfig = {
   backend: {
@@ -18,7 +19,7 @@ const occConfig: OccConfig = {
   declarations: [],
   imports: [],
   providers: [
-    provideConfig(layoutConfig),
+    provideConfig(prfLayoutConfig),
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
     provideConfig(occConfig),
