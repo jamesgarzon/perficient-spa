@@ -6,12 +6,13 @@ import { environment } from '../../environments/environment';
 import { PrfIconConfig } from './config/icon.config';
 import { prfLayoutConfig } from './config/layout-config';
 import { prfMediaConfig } from './config/media.config';
+import { prfPWAModuleConfig } from './config/pwa.config';
 
 const occConfig: OccConfig = {
   backend: {
     occ: {
-      ...(environment.occBaseUrl ? { baseUrl: environment.occBaseUrl } : {}),
-      prefix: environment.prefix ? environment.prefix : '/occ/v2/',
+      ...(environment?.occBaseUrl ? { baseUrl: environment.occBaseUrl } : {}),
+      prefix: environment?.prefix ? environment.prefix : '/occ/v2/',
     },
   },
 };
@@ -22,6 +23,7 @@ const occConfig: OccConfig = {
   providers: [
     provideConfig(prfLayoutConfig),
     provideConfig(prfMediaConfig),
+    provideConfig(prfPWAModuleConfig),
     ...defaultCmsContentProviders,
     provideConfig(occConfig),
     provideConfig(<SiteContextConfig>{
@@ -29,7 +31,7 @@ const occConfig: OccConfig = {
         currency: ['USD'],
         language: ['en', 'de'],
         baseSite: ['electronics-spa'],
-        urlParameters: ['baseSite', 'language', 'currency'],
+        // urlParameters: ['baseSite', 'language', 'currency'],
       },
     }),
     provideConfig(PrfI18nConfig),

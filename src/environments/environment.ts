@@ -4,7 +4,7 @@
 
 export const environment = {
   occBaseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/',
-  mediaBaseUrl: 'https://localhost:9002',
+  mediaBaseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/',
   prefix: '/occ/v2/',
   production: false,
 };
