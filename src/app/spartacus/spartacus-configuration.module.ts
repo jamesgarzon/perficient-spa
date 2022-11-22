@@ -2,6 +2,16 @@ import { NgModule } from '@angular/core';
 import { FeaturesConfig, OccConfig, provideConfig, SiteContextConfig } from '@spartacus/core';
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from '@spartacus/storefront';
 import { PrfI18nConfig } from './config/i18n.config';
+import { environment } from '../../environments/environment';
+
+const occConfig: OccConfig = {
+  backend: {
+    occ: {
+      ...(environment.occBaseUrl ? { baseUrl: environment.occBaseUrl } : {}),
+      prefix: environment.prefix ? environment.prefix : '/occ/v2/',
+    },
+  },
+};
 
 @NgModule({
   declarations: [],
@@ -10,13 +20,7 @@ import { PrfI18nConfig } from './config/i18n.config';
     provideConfig(layoutConfig),
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
-    provideConfig(<OccConfig>{
-      backend: {
-        occ: {
-          baseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/',
-        },
-      },
-    }),
+    provideConfig(occConfig),
     provideConfig(<SiteContextConfig>{
       context: {
         currency: ['USD'],
