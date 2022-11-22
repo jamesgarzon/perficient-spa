@@ -3,6 +3,7 @@ import { FeaturesConfig, OccConfig, provideConfig, SiteContextConfig } from '@sp
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from '@spartacus/storefront';
 import { PrfI18nConfig } from './config/i18n.config';
 import { environment } from '../../environments/environment';
+import { PrfIconConfig } from './config/icon.config';
 
 const occConfig: OccConfig = {
   backend: {
@@ -29,6 +30,7 @@ const occConfig: OccConfig = {
       },
     }),
     provideConfig(PrfI18nConfig),
+    provideConfig(PrfIconConfig),
     provideConfig(<FeaturesConfig>{
       features: {
         level: '4.3',
