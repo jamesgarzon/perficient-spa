@@ -1,10 +1,11 @@
-import { MediaConfig } from '@spartacus/storefront';
+import { ImageLoadingStrategy, MediaConfig } from '@spartacus/storefront';
 
 /**
  * Ensure window exists (avoid error with ssr)
  */
 const pixelDensity = typeof window !== 'undefined' ? window.devicePixelRatio : 1;
 export const prfMediaConfig: MediaConfig = {
+  imageLoadingStrategy: ImageLoadingStrategy.LAZY,
   mediaFormats: {
     mobile: { width: 768 * pixelDensity },
     tablet: { width: 992 * pixelDensity },
