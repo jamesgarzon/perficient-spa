@@ -28,6 +28,7 @@ const occConfig: OccConfig = {
         currency: ['USD'],
         language: ['en', 'de'],
         baseSite: ['electronics-spa'],
+        urlParameters: ['baseSite', 'language', 'currency'],
       },
     }),
     provideConfig(PrfI18nConfig),
