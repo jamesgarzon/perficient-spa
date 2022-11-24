@@ -27,12 +27,13 @@ const occConfig: OccConfig = {
     ...defaultCmsContentProviders,
     provideConfig(occConfig),
     provideConfig(<SiteContextConfig>{
-      context: {
-        currency: ['USD'],
-        language: ['en', 'de'],
-        baseSite: ['electronics-spa'],
-        // urlParameters: ['baseSite', 'language', 'currency'],
-      },
+      // context: {
+      //   currency: ['USD'],
+      //   language: ['en', 'de'],
+      //   baseSite: ['electronics-spa'],
+      //   customParam: ['test'],
+      //   urlParameters: ['customParam', 'baseSite', 'language', 'currency'],
+      // },
     }),
     provideConfig(PrfI18nConfig),
     provideConfig(PrfIconConfig),
