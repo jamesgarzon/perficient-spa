@@ -1,1 +1,6 @@
 <p>static-page works!</p>
+<a routerLink="/electronics/cameras/Toshiba/458542/Mini-T-Cam">Hardcoded link</a>
+<br />
+<a [routerLink]="{ cxRoute: 'product', params: { code: '458542', nameForUrl: 'Mini-T-Cam' } } | cxUrl">dynamic link</a>
+<br />
+<button (click)="goToRandomProduct()">Feeling lucky!</button>

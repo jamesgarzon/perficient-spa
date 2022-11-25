@@ -11,6 +11,8 @@ import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 import { StaticPageComponent } from './static-page/static-page.component';
+import { RouterModule } from '@angular/router';
+import { UrlModule } from '@spartacus/core';
 
 const devImports = [];
 if (!environment.production) {
@@ -36,6 +38,8 @@ if (!environment.production) {
     CustomRoutingModule,
     // dev import
     ...devImports,
+    RouterModule,
+    UrlModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

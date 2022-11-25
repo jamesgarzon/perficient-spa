@@ -10,7 +10,7 @@ const STATIC_ROUTES: Routes = [
     path: 'static-page',
     component: StaticPageComponent,
     canActivate: [CmsPageGuard],
-    data: { pageLabel: 'staticPage' },
+    data: { pageLabel: 'sale' },
   },
   // alias
   {
