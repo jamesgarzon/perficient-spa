@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FeaturesConfig, OccConfig, provideConfig, SiteContextConfig } from '@spartacus/core';
 import { defaultCmsContentProviders } from '@spartacus/storefront';
-import { PrfI18nConfig } from './config/i18n.config';
 import { environment } from '../../environments/environment';
-import { PrfIconConfig } from './config/icon.config';
-import { prfLayoutConfig } from './config/layout-config';
-import { prfMediaConfig } from './config/media.config';
-import { prfPWAModuleConfig } from './config/pwa.config';
+import { prfMediaConfig, PrfIconConfig, prfPWAModuleConfig, prfLayoutConfig, PrfI18nConfig } from '@prf-config';
 
 const occConfig: OccConfig = {
   backend: {

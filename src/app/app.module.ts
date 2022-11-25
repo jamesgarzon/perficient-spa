@@ -9,6 +9,8 @@ import { SpartacusModule } from './spartacus/spartacus.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CustomRoutingModule } from './custom-routing/custom-routing.module';
+import { StaticPageComponent } from './static-page/static-page.component';
 
 const devImports = [];
 if (!environment.production) {
@@ -16,7 +18,7 @@ if (!environment.production) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, StaticPageComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
@@ -31,7 +33,7 @@ if (!environment.production) {
       registrationStrategy: 'registerWhenStable:30000',
     }),
     BrowserTransferStateModule,
-
+    CustomRoutingModule,
     // dev import
     ...devImports,
   ],

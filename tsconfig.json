@@ -3,6 +3,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@prf-config": ["src/app/spartacus/config/index"],
+      "@prf-features/*": ["src/app/spartacus/features/*"],
+      "@prf-utils/*": ["src/app/utils/*"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

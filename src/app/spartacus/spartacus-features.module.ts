@@ -65,6 +65,7 @@ import { CartSavedCartFeatureModule } from './features/cart/cart-saved-cart-feat
 import { CartQuickOrderFeatureModule } from './features/cart/cart-quick-order-feature.module';
 import { CartImportExportFeatureModule } from './features/cart/cart-import-export-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
+import { PrfProductModule } from '@prf-features/product/prf-product.module';
 
 @NgModule({
   declarations: [],
@@ -144,6 +145,8 @@ import { AsmFeatureModule } from './features/asm/asm-feature.module';
     CartQuickOrderFeatureModule,
     CartImportExportFeatureModule,
     AsmFeatureModule,
+    // custom modules
+    PrfProductModule,
   ],
 })
 export class SpartacusFeaturesModule {}
