@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  occBaseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/',
-  mediaBaseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/',
+  occBaseUrl: 'https://localhost:9002/',
+  mediaBaseUrl: 'https://localhost:9002/',
   prefix: '/occ/v2/',
   production: false,
 };

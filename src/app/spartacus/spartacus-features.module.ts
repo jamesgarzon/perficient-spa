@@ -66,6 +66,9 @@ import { CartQuickOrderFeatureModule } from './features/cart/cart-quick-order-fe
 import { CartImportExportFeatureModule } from './features/cart/cart-import-export-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { PrfProductModule } from '@prf-features/product/prf-product.module';
+import { PrfCartModule } from '@prf-features/cart/prf-cart.module';
+import { PrfNewsModule } from '@prf-features/news/prf-news.module';
+import { PrfCmsComponentsModule } from './cms-components/prf-cms-components.module';
 
 @NgModule({
   declarations: [],
@@ -145,8 +148,14 @@ import { PrfProductModule } from '@prf-features/product/prf-product.module';
     CartQuickOrderFeatureModule,
     CartImportExportFeatureModule,
     AsmFeatureModule,
+
+    // CMS components
+    PrfCmsComponentsModule,
+
     // custom modules
     PrfProductModule,
+    PrfCartModule,
+    PrfNewsModule,
   ],
 })
 export class SpartacusFeaturesModule {}

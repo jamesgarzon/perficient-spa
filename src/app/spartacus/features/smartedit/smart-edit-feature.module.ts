@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CmsConfig, provideConfig } from '@spartacus/core';
-import { SmartEditRootModule, SMART_EDIT_FEATURE } from '@spartacus/smartedit/root';
+import { SmartEditRootModule, SMART_EDIT_FEATURE, SmartEditConfig } from '@spartacus/smartedit/root';
 
 @NgModule({
   declarations: [],
@@ -11,6 +11,12 @@ import { SmartEditRootModule, SMART_EDIT_FEATURE } from '@spartacus/smartedit/ro
         [SMART_EDIT_FEATURE]: {
           module: () => import('@spartacus/smartedit').then((m) => m.SmartEditModule),
         },
+      },
+    }),
+    provideConfig(<SmartEditConfig>{
+      smartEdit: {
+        storefrontPreviewRoute: 'cx-preview',
+        allowOrigin: 'taloscommerce:9002, localhost:9002, local.taloscommerce.com:9002',
       },
     }),
   ],
