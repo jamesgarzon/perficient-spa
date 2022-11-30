@@ -1,2 +1,5 @@
-<h1>{{ 'news.headline.title' | cxTranslate }}</h1>
-<p>{{ 'news.headline.description' | cxTranslate }}</p>
+<div>
+  <h1>{{ 'news.headline.title' | cxTranslate }}</h1>
+  <p>{{ 'news.headline.description' | cxTranslate }}</p>
+  <p>{{ data$ | async | json }}</p>
+</div>
