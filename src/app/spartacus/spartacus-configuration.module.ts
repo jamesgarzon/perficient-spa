@@ -9,6 +9,7 @@ import {
   prfLayoutConfig,
   PrfI18nConfig,
   prfRoutingConfig,
+  PrfCmsContentProviders,
 } from '@prf-config';
 
 const occConfig: OccConfig = {
@@ -46,6 +47,7 @@ const occConfig: OccConfig = {
         level: '4.3',
       },
     }),
+    ...PrfCmsContentProviders,
   ],
 })
 export class SpartacusConfigurationModule {}

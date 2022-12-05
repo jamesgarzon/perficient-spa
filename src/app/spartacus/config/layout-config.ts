@@ -43,7 +43,7 @@ export const prfLayoutConfig: LayoutConfig = {
     },
     LandingPage2Template: {
       pageFold: 'Section2B',
-      slots: ['Section1', 'Section2A', 'Section2B', 'Section2C', 'Section3', 'Section4', 'Section5'],
+      slots: ['PrfBannerSlot', 'Section1', 'Section2A', 'Section2B', 'Section2C', 'Section3', 'Section4', 'Section5'],
     },
     ContentPage1Template: {
       slots: ['Section2A', 'Section2B'],
