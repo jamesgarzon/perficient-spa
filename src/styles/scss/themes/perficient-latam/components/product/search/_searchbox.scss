@@ -1,0 +1,18 @@
+@use 'mixins';
+
+@mixin prf-latam-search-box {
+  %cx-searchbox {
+    > * {
+      @include mixins.cx-media-breakpoint-up(md) {
+        background-color: var(--cx-color-background);
+        color: var(--cx-color-secondary);
+      }
+    }
+
+    .searchbox {
+      input {
+        font-weight: var(--cx-font-weight-semi);
+      }
+    }
+  }
+}

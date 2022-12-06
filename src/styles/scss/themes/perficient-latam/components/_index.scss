@@ -1,0 +1,5 @@
+@forward './product';
+@forward './layout';
+
+@use './layout';
+@use './product';

@@ -1,0 +1,26 @@
+@mixin aspect-ratio-box($_padding-bottom: 100%, $_img-inner-wrapper: cx-media) {
+  padding-bottom: $_padding-bottom;
+  position: relative;
+  width: 100%;
+
+  img,
+  #{$_img-inner-wrapper} {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #{$_img-inner-wrapper} {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+}

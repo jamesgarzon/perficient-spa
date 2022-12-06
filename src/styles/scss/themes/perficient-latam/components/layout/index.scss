@@ -1,0 +1,5 @@
+@forward './common-template';
+@forward './header';
+
+@use './header';
+@use './common-template';

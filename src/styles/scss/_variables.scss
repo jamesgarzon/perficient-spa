@@ -1,0 +1,44 @@
+// Typography
+$font-size-base: 1rem; //16px
+$h1-font-size: $font-size-base * 1.85; //36px
+$h2-font-size: $font-size-base * 1.75; //28px
+$h3-font-size: $font-size-base * 1.375; //22px
+$h4-font-size: $font-size-base * 1.125; //18px
+$h5-font-size: $font-size-base; //16px
+$font-size-md: $font-size-base * 0.875; //14px
+$font-size-sm: $font-size-base * 0.75; //12px
+$font-size-xs: $font-size-base * 0.6875; //11px
+$font-size-xxs: $font-size-base * 0.625; //10px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+
+$line-height-base: 1.6;
+$headings-line-height: 1.222222222222222;
+
+$font-types: (
+  'h1': $h1-font-size $font-weight-normal $headings-line-height,
+  'h2': $h2-font-size $font-weight-semi $headings-line-height,
+  'h3': $h3-font-size $font-weight-semi $headings-line-height,
+  'h4': $h4-font-size $font-weight-bold $headings-line-height,
+  'h5': $h5-font-size $font-weight-bold $headings-line-height,
+  'h6': $h5-font-size $font-weight-semi $headings-line-height,
+  'h7': $font-size-sm $font-weight-normal $headings-line-height,
+  'h8': $font-size-sm $font-weight-bold $headings-line-height,
+  'base': $h5-font-size $font-weight-normal $line-height-base,
+  'md': $font-size-md $font-weight-normal $line-height-base,
+  'sm': $font-size-sm $font-weight-normal $line-height-base,
+  'xs': $font-size-xs $font-weight-normal $line-height-base,
+  'xxs': $font-size-xxs $font-weight-normal $line-height-base,
+);
+
+$weight-sizes: (
+  'light': $font-weight-light,
+  'normal': $font-weight-normal,
+  'semi': $font-weight-semi,
+  'bold': $font-weight-bold,
+);
+
+$font-url: 'https://fonts.googleapis.com/css?family=Barlow:200,400,600,800';

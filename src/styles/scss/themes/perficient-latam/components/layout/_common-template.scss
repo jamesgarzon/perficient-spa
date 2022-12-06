@@ -1,0 +1,7 @@
+@mixin prf-latam-page-layout {
+  cx-page-layout {
+    &.footer {
+      background-color: var(--cx-color-secondary);
+    }
+  }
+}
