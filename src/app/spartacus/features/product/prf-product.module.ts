@@ -5,9 +5,10 @@ import { PrfProductOccModule } from './occ/prf-product-occ.module';
 
 // load augmentations
 import './model';
+import { PrfProductComponentsModule } from './components/prf-product-components.module';
 
 @NgModule({
-  imports: [PrfProductOccModule],
+  imports: [PrfProductOccModule, PrfProductComponentsModule],
   providers: [provideConfig(prfRoutingConfig), provideConfig(prfEndpointProductConfig)],
 })
 export class PrfProductModule {}

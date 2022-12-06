@@ -1,0 +1,26 @@
+@use '~@spartacus/styles/scss/mixins' as *;
+/* stylelint-disable scss/at-import-no-partial-leading-underscore */
+@import '~@spartacus/styles/scss/components/product/details/product-summary';
+
+:host {
+  @extend %cx-product-summary !optional;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .price,
+  .rating {
+    flex: 0 0 50%;
+  }
+
+  .rating {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+
+    .count {
+      color: var(--cx-color-primary);
+      margin-left: var(--cx-spatial-sm);
+    }
+  }
+}
