@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrfReferredCustomersSplitBannerComponent } from './prf-referred-customers-split-banner.component';
+import { PrfSplitBannerComponent } from './prf-split-banner.component';
 
 describe('PrfReferredCustomersSplitBannerComponent', () => {
-  let component: PrfReferredCustomersSplitBannerComponent;
-  let fixture: ComponentFixture<PrfReferredCustomersSplitBannerComponent>;
+  let component: PrfSplitBannerComponent;
+  let fixture: ComponentFixture<PrfSplitBannerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PrfReferredCustomersSplitBannerComponent],
+      declarations: [PrfSplitBannerComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PrfReferredCustomersSplitBannerComponent);
+    fixture = TestBed.createComponent(PrfSplitBannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

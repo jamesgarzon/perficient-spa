@@ -7,7 +7,7 @@ export function prfReferredCustomerComponentsConfig(): CmsConfig {
   return {
     featureModules: {
       [PRF_REFERRED_CUSTOMER_FEATURE]: {
-        cmsComponents: ['AccountReferredCustomersComponent', 'TcSplitViewBannerComponent'],
+        cmsComponents: ['AccountReferredCustomersComponent'],
       },
       // by default core is bundled together with components
       [PRF_REFERRED_CUSTOMER_CORE_FEATURE]: PRF_REFERRED_CUSTOMER_FEATURE,

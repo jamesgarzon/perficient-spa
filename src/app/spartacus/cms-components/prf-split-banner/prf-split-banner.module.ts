@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfigModule } from '@spartacus/core';
 import { CmsConfig } from '@spartacus/core';
-import { PrfReferredCustomersSplitBannerComponent } from './prf-referred-customers-split-banner.component';
+import { PrfSplitBannerComponent } from './prf-split-banner.component';
 
 @NgModule({
-  declarations: [PrfReferredCustomersSplitBannerComponent],
+  declarations: [PrfSplitBannerComponent],
   imports: [
     CommonModule,
     ConfigModule.withConfig(<CmsConfig>{
       cmsComponents: {
         TcSplitViewBannerComponent: {
-          component: PrfReferredCustomersSplitBannerComponent,
+          component: PrfSplitBannerComponent,
         },
       },
     }),
   ],
-  exports: [PrfReferredCustomersSplitBannerComponent],
+  exports: [PrfSplitBannerComponent],
 })
-export class PrfReferredCustomersSplitBannerModule {}
+export class PrfSplitBannerModule {}
