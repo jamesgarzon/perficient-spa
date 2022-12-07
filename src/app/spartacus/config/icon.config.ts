@@ -1,4 +1,4 @@
-import { ICON_TYPE, IconConfig, IconResourceType } from '@spartacus/storefront';
+import { IconConfig, IconResourceType } from '@spartacus/storefront';
 import { PRF_ICON_TYPE } from '../models/icons.model';
 
 export const PrfIconConfig: IconConfig = {
@@ -14,7 +14,7 @@ export const PrfIconConfig: IconConfig = {
       {
         type: IconResourceType.SVG,
         url: './assets/icons/icons-sprite.svg',
-        types: [PRF_ICON_TYPE.LAB, ICON_TYPE.CART],
+        types: [PRF_ICON_TYPE.LAB],
       },
     ],
   },

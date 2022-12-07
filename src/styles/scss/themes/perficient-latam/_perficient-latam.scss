@@ -1,0 +1,18 @@
+@use './variables' as var;
+@use 'mixins';
+@use './components';
+
+.perficient-latam {
+  $font-size-base: 2rem;
+
+  @include components.prf-latam-header;
+  @include components.prf-latam-site-context-selector;
+  @include components.prf-latam-search-box;
+  @include components.prf-latam-page-layout;
+
+  font-family: var.$font-family-base;
+
+  @each $color, $value in var.$theme-colors {
+    --cx-color-#{$color}: #{$value};
+  }
+}

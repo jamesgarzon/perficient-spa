@@ -1,0 +1,10 @@
+@use '~@spartacus/styles/scss/mixins' as *;
+@import '~@spartacus/styles/scss/components/product/details/product-intro';
+
+:host {
+  @extend %cx-product-intro !optional;
+
+  .summary {
+    margin: 0;
+  }
+}

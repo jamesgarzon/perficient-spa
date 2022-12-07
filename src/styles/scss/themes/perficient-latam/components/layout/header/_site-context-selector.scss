@@ -1,0 +1,14 @@
+@use 'mixins';
+
+@mixin prf-latam-site-context-selector {
+  %cx-site-context-selector {
+    select {
+      background-color: var(--cx-color-secondary);
+      color: inherit;
+
+      @include mixins.cx-media-breakpoint-down(lg) {
+        background-color: var(--cx-color-light);
+      }
+    }
+  }
+}

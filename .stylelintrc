@@ -42,6 +42,7 @@
           "hasBlock": true
         }
       ]
-    ]
+    ],
+    "scss/percent-placeholder-pattern": ".*"
   }
 }

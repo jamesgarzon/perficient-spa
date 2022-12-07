@@ -2,4 +2,13 @@
 
 /* stylelint-disable scss/dollar-variable-pattern */
 $styleVersion: 4.3;
+$skipComponentStyles: (
+  //cx-product-summary,
+  //cx-product-intro,
+);
+
+/* We override this font, because the url is being loaded from bootstrap using this variable */
+$font-url: '';
+
 @import '~@spartacus/styles/index';
+@import 'styles/scss';

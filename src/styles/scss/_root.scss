@@ -1,0 +1,21 @@
+@use './variables' as var;
+
+:root {
+  @each $weight, $value in var.$weight-sizes {
+    --cx-font-weight-#{$weight}: #{$value};
+  }
+
+  @each $type, $value in var.$font-types {
+    $size: nth($value, 1);
+    $weight: nth($value, 2);
+    $line-height: nth($value, 3);
+
+    /* stylelint-disable order/order */
+    --cx-font-#{$type}-size: #{$size};
+    --cx-font-#{$type}-weight: #{$weight};
+    --cx-font-#{$type}-line-height: #{$line-height};
+  }
+
+  --cx-line-height-base: var.$line-height-base;
+  --cx-line-height-headding: var.$headings-line-height;
+}

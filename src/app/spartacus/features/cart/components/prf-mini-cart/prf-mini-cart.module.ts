@@ -10,7 +10,7 @@ import { provideConfig } from '@spartacus/core';
   providers: [
     provideConfig({
       cmsComponents: {
-        MiniCartComponent: {
+        customCartComponent: {
           component: PrfMiniCartComponent,
         },
       },

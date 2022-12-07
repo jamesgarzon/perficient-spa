@@ -1,0 +1,17 @@
+$headings: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+
+@each $font-type in $headings {
+  #{$font-type},
+  .#{$font-type} {
+    font-size: var(--cx-font-#{$font-type}-size);
+    font-weight: var(--cx-font-#{$font-type}-weight);
+    line-height: var(--cx-font-#{$font-type}-line-height);
+  }
+}
+
+small,
+.small {
+  font-size: var(--cx-font-sm-size);
+  font-weight: var(--cx-font-sm-weight);
+  line-height: var(--cx-font-sm-line-height);
+}
