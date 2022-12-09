@@ -18,4 +18,10 @@
 
   --cx-line-height-base: var.$line-height-base;
   --cx-line-height-headding: var.$headings-line-height;
+
+  // cx media component attributes
+  --cx-media-width: 100%;
+  --cx-media-height: 100%;
+  --cx-media-position: static;
+  --cx-media-object-fit: unset;
 }

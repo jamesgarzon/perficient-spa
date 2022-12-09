@@ -1,0 +1,9 @@
+%cx-media {
+  height: var(--cx-media-height);
+
+  img {
+    object-fit: var(--cx-media-object-fit);
+    position: var(--cx-media-position);
+    width: var(--cx-media-width);
+  }
+}

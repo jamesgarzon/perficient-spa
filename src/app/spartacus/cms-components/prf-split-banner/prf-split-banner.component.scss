@@ -11,15 +11,10 @@
 }
 
 cx-media {
+  --cx-media-object-fit: cover;
   grid-area: image;
   position: relative;
   width: 100%;
-
-  ::ng-deep img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
 }
 
 .headline {
@@ -35,12 +30,7 @@ cx-media {
   }
 
   cx-media {
-    height: 100%;
-    min-height: 400px;
-
-    ::ng-deep img {
-      position: absolute;
-    }
+    --cx-media-position: absolute;
   }
 
   .headline {
@@ -49,5 +39,11 @@ cx-media {
     h2 {
       --cx-font-h2-size: 2rem;
     }
+  }
+}
+
+@include mixins.cx-media-breakpoint-up(lg) {
+  cx-media {
+    --cx-media-height: 350px;
   }
 }
