@@ -1,0 +1,53 @@
+/* stylelint-disable selector-pseudo-element-no-unknown */
+@use 'mixins';
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-gap: var(--cx-spatial-md);
+  grid-template-areas:
+    'image'
+    'headline';
+}
+
+cx-media {
+  grid-area: image;
+  position: relative;
+  width: 100%;
+
+  ::ng-deep img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.headline {
+  grid-area: headline;
+  text-align: center;
+}
+
+@include mixins.cx-media-breakpoint-up(md) {
+  .container {
+    grid-gap: var(--cx-spatial-lg);
+    grid-template-areas: 'headline image';
+    grid-template-columns: 2fr 3fr;
+  }
+
+  cx-media {
+    height: 100%;
+    min-height: 400px;
+
+    ::ng-deep img {
+      position: absolute;
+    }
+  }
+
+  .headline {
+    text-align: left;
+
+    h2 {
+      --cx-font-h2-size: 2rem;
+    }
+  }
+}

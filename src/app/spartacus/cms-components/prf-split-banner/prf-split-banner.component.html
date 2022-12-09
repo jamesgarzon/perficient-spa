@@ -1,1 +1,10 @@
-<p>prf-referred-customers-split-banner works!</p>
+<ng-container *ngIf="componentData$ | async as data">
+  <!--  <div [ngClass]="{ 'text-center': !data.media }">-->
+  <div class="container">
+    <div class="headline">
+      <h2 *ngIf="data.title">{{ data.title }}</h2>
+      <p *ngIf="data.content">{{ data.content }}</p>
+    </div>
+    <cx-media *ngIf="data.media" [container]="data.media"></cx-media>
+  </div>
+</ng-container>

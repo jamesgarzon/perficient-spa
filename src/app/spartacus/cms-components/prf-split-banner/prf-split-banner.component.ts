@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CmsComponentData } from '@spartacus/storefront';
+import { PrfSplitViewBanner } from '../../models/custom-cms.model';
 
 @Component({
   selector: 'app-prf-split-banner',
@@ -6,4 +8,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./prf-split-banner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PrfSplitBannerComponent {}
+export class PrfSplitBannerComponent {
+  componentData$ = this.cmsComponentData.data$;
+  constructor(protected cmsComponentData: CmsComponentData<PrfSplitViewBanner>) {}
+}
