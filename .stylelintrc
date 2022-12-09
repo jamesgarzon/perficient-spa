@@ -24,7 +24,6 @@
     "order/order": [
       [
         "custom-properties",
-        "dollar-variables",
         {
           "type": "at-rule",
           "name": "extend"

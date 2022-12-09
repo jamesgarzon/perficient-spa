@@ -10,7 +10,6 @@
     $weight: nth($value, 2);
     $line-height: nth($value, 3);
 
-    /* stylelint-disable order/order */
     --cx-font-#{$type}-size: #{$size};
     --cx-font-#{$type}-weight: #{$weight};
     --cx-font-#{$type}-line-height: #{$line-height};
