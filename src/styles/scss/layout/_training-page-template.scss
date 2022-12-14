@@ -1,0 +1,9 @@
+.TrainingPageTemplate {
+  .BodyContent {
+    margin-top: var(--cx-spatial-lg);
+
+    > *:not(:last-child) {
+      margin-bottom: var(--cx-spatial-lg);
+    }
+  }
+}

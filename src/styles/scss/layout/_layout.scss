@@ -2,13 +2,3 @@
   padding-left: var(--cx-spatial-md);
   padding-right: var(--cx-spatial-md);
 }
-
-.TrainingPageTemplate {
-  .BodyContent {
-    margin: var(--cx-spatial-lg) 0;
-
-    > *:not(:last-child) {
-      margin-bottom: var(--cx-spatial-lg);
-    }
-  }
-}

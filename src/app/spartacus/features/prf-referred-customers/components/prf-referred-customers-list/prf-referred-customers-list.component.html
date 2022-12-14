@@ -1,1 +1,13 @@
-<p>prf-referred-customers-list works!</p>
+<div class="container">
+  <h2>Referred customers</h2>
+  <ng-container *ngIf="referredCustomers$ | async as referredCustomers">
+    <div class="cards-container">
+      <cx-card
+        *ngFor="let referredCustomer of referredCustomers"
+        [border]="true"
+        [fitToContainer]="true"
+        [content]="(getCardContent(referredCustomer) | async) || {}"
+      ></cx-card>
+    </div>
+  </ng-container>
+</div>

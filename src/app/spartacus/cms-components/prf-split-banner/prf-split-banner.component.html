@@ -1,5 +1,4 @@
 <ng-container *ngIf="componentData$ | async as data">
-  <!--  <div [ngClass]="{ 'text-center': !data.media }">-->
   <div class="container">
     <div class="headline">
       <h2 *ngIf="data.title">{{ data.title }}</h2>
