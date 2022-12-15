@@ -1,0 +1,9 @@
+{
+  "referredCustomers": {
+    "title": "Referred Customers",
+    "deletedSuccessfully": "Referred customer deleted successfully",
+    "list": {
+      "empty": "You don't have any referred customers"
+    }
+  }
+}

@@ -1,24 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthGuard, ConfigModule } from '@spartacus/core';
-import { CmsConfig } from '@spartacus/core';
 import { PrfReferredCustomersListComponent } from './prf-referred-customers-list.component';
-import { CardModule } from '@spartacus/storefront';
+import { CardModule, SpinnerModule } from '@spartacus/storefront';
+import { I18nModule } from '@spartacus/core';
 
 @NgModule({
   declarations: [PrfReferredCustomersListComponent],
-  imports: [
-    CommonModule,
-    CardModule,
-    ConfigModule.withConfig(<CmsConfig>{
-      cmsComponents: {
-        AccountReferredCustomersComponent: {
-          component: PrfReferredCustomersListComponent,
-          guards: [AuthGuard],
-        },
-      },
-    }),
-  ],
+  imports: [CommonModule, CardModule, SpinnerModule, I18nModule],
   exports: [PrfReferredCustomersListComponent],
 })
 export class PrfReferredCustomersListModule {}

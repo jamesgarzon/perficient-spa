@@ -9,4 +9,6 @@ export abstract class PrfReferredCustomerAdapter {
    * @param userId user id
    */
   abstract getReferredCustomers(userId: string): Observable<ReferredCustomer[]>;
+
+  abstract deleteReferredCustomer(userId: string, email: string): Observable<unknown>;
 }

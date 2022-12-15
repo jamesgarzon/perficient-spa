@@ -6,5 +6,9 @@ declare module '@spartacus/core' {
      * Get referred customers endpoint
      */
     referredCustomers?: string | OccEndpoint;
+    /**
+     * Delete referred customers endpoint
+     */
+    deleteReferredCustomer?: string | OccEndpoint;
   }
 }

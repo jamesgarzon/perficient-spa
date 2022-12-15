@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Referred customers</h2>
+  <h2>{{ 'referredCustomers.title' | cxTranslate }}</h2>
   <ng-container *ngIf="referredCustomers$ | async as referredCustomers">
     <div class="cards-container">
       <cx-card
@@ -7,7 +7,11 @@
         [border]="true"
         [fitToContainer]="true"
         [content]="(getCardContent(referredCustomer) | async) || {}"
+        (deleteCard)="deleteReferredCustomer(referredCustomer.email)"
       ></cx-card>
     </div>
+    <ng-container *ngIf="!referredCustomers.length">
+      <p class="empty-list">{{ 'referredCustomers.list.empty' | cxTranslate }}</p>
+    </ng-container>
   </ng-container>
 </div>

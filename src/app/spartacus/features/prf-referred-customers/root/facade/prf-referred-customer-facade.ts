@@ -10,9 +10,11 @@ import { PRF_REFERRED_CUSTOMER_CORE_FEATURE } from '../feature-name';
     facadeFactory({
       facade: PrfReferredCustomerFacade,
       feature: PRF_REFERRED_CUSTOMER_CORE_FEATURE,
-      methods: ['getReferredCustomers'],
+      methods: ['getReferredCustomers', 'deleteReferredCustomer'],
     }),
 })
 export abstract class PrfReferredCustomerFacade {
   abstract getReferredCustomers(): Observable<ReferredCustomer[]>;
+
+  abstract deleteReferredCustomer(email: string): Observable<unknown>;
 }

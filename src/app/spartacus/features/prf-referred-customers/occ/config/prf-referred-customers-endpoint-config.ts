@@ -5,6 +5,7 @@ export const prfReferredCustomerEndpointConfig: OccConfig = {
     occ: {
       endpoints: {
         referredCustomers: '/users/${userId}/referredcustomers',
+        deleteReferredCustomer: '/users/${userId}/referredcustomers/${email}',
       },
     },
   },
