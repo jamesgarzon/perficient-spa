@@ -4,6 +4,8 @@ import { prfReferredCustomerEndpointConfig } from './config/prf-referred-custome
 import './models';
 import { PrfReferredCustomerAdapter } from '@prf-features/prf-referred-customers/core';
 import { OccPrfReferredCustomerAdapterService } from './adapters';
+import { REFERRED_CUSTOMER_NORMALIZER } from '../core/connectors/prf-referred-customer/converters';
+import { PrReferredCustomerNormalizer } from './converters/tc-referred-customer.normalizer';
 
 @NgModule({
   declarations: [],
@@ -13,6 +15,11 @@ import { OccPrfReferredCustomerAdapterService } from './adapters';
     {
       provide: PrfReferredCustomerAdapter,
       useClass: OccPrfReferredCustomerAdapterService,
+    },
+    {
+      provide: REFERRED_CUSTOMER_NORMALIZER,
+      useExisting: PrReferredCustomerNormalizer,
+      multi: true,
     },
   ],
 })

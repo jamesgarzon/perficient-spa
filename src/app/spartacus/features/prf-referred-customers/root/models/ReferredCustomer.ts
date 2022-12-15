@@ -5,4 +5,5 @@ export interface ReferredCustomer {
   documentNumber: string;
   firstName: string;
   lastName: string;
+  fullName?: string;
 }
