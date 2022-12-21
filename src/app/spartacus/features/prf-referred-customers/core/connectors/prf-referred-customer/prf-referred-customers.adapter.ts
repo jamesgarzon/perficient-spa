@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { ReferredCustomer } from '@prf-features/prf-referred-customers';
 
-export abstract class PrfReferredCustomerAdapter {
+export abstract class PrfReferredCustomersAdapter {
   protected constructor() {}
 
   /**

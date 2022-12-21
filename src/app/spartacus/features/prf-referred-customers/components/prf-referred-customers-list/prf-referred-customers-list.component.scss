@@ -1,10 +1,5 @@
 @use 'mixins';
 
-:host {
-  background: var(--cx-color-background);
-  padding: var(--cx-spatial-md);
-}
-
 cx-card {
   background: var(--cx-color-inverse);
   display: block;

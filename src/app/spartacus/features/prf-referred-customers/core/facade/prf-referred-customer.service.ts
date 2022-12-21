@@ -4,7 +4,7 @@ import { Command, CommandService, EventService, Query, QueryService, QueryState,
 import { PrfReferredCustomerFacade } from '../../root/facade/prf-referred-customer-facade';
 import { ReferredCustomer } from '@prf-features/prf-referred-customers/root';
 import { map, switchMap, take, tap } from 'rxjs/operators';
-import { PrfReferredCustomerAdapter } from '../connectors';
+import { PrfReferredCustomersConnector } from '../connectors';
 import {
   DeleteReferredCustomersEvent,
   LoadReferredCustomersEvent,
@@ -16,16 +16,15 @@ export class PrfReferredCustomerService implements PrfReferredCustomerFacade {
     protected userIdService: UserIdService,
     protected queryService: QueryService,
     protected commandService: CommandService,
-    protected prfReferredCustomerAdapter: PrfReferredCustomerAdapter,
+    protected prfReferredCustomerConnector: PrfReferredCustomersConnector,
     protected eventService: EventService
   ) {}
 
-  deleteReferredCustomer(email: string): Observable<unknown> {
-    return this.deleteReferredCustomerCommand.execute({ email });
-  }
-
   getReferredCustomersState(): Observable<QueryState<ReferredCustomer[] | undefined>> {
     return this.referredCustomersQuery.getState();
+  }
+  deleteReferredCustomer(email: string): Observable<unknown> {
+    return this.deleteReferredCustomerCommand.execute({ email });
   }
 
   getReferredCustomers(): Observable<ReferredCustomer[]> {
@@ -36,7 +35,7 @@ export class PrfReferredCustomerService implements PrfReferredCustomerFacade {
     () =>
       this.userIdService.getUserId().pipe(
         take(1),
-        switchMap((userId) => this.prfReferredCustomerAdapter.getReferredCustomers(userId))
+        switchMap((userId) => this.prfReferredCustomerConnector.getReferredCustomers(userId))
       ),
     {
       reloadOn: [LoadReferredCustomersEvent],
@@ -47,7 +46,7 @@ export class PrfReferredCustomerService implements PrfReferredCustomerFacade {
     ({ email }) => {
       return this.userIdService.getUserId().pipe(
         take(1),
-        switchMap((userId) => this.prfReferredCustomerAdapter.deleteReferredCustomer(userId, email)),
+        switchMap((userId) => this.prfReferredCustomerConnector.deleteReferredCustomer(userId, email)),
         tap(() => {
           this.eventService.dispatch({ email }, DeleteReferredCustomersEvent);
         })

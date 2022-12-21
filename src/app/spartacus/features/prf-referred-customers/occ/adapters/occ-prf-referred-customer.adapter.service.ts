@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConverterService, normalizeHttpError, OccEndpointsService } from '@spartacus/core';
 import { HttpClient } from '@angular/common/http';
-import { PrfReferredCustomerAdapter } from '../../core';
+import { PrfReferredCustomersAdapter } from '../../core';
 import { Observable, throwError } from 'rxjs';
 import { ReferredCustomer } from '../../root';
 import { catchError, pluck } from 'rxjs/operators';
@@ -11,7 +11,7 @@ import { REFERRED_CUSTOMER_NORMALIZER } from '../../core/connectors/prf-referred
 @Injectable({
   providedIn: 'root',
 })
-export class OccPrfReferredCustomerAdapterService implements PrfReferredCustomerAdapter {
+export class OccPrfReferredCustomerAdapterService implements PrfReferredCustomersAdapter {
   constructor(
     private occEndpoints: OccEndpointsService,
     private http: HttpClient,
