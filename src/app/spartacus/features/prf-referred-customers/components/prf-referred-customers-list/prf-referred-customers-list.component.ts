@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TranslationService } from '@spartacus/core';
+import { QueryState, TranslationService } from '@spartacus/core';
 import { map, take } from 'rxjs/operators';
 import { combineLatest, Observable } from 'rxjs';
 import { Card, LAUNCH_CALLER, LaunchDialogService } from '@spartacus/storefront';
@@ -13,7 +13,8 @@ import { PrfReferredCustomerFacade } from '../../root/facade/prf-referred-custom
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrfReferredCustomersListComponent {
-  referredCustomers$: Observable<ReferredCustomer[]> = this.referredCustomerService.getReferredCustomers();
+  referredCustomersState$: Observable<QueryState<ReferredCustomer[] | undefined>> =
+    this.referredCustomerService.getReferredCustomersState();
 
   constructor(
     private translation: TranslationService,
