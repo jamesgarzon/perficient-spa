@@ -10,7 +10,6 @@
     $weight: nth($value, 2);
     $line-height: nth($value, 3);
 
-    /* stylelint-disable order/order */
     --cx-font-#{$type}-size: #{$size};
     --cx-font-#{$type}-weight: #{$weight};
     --cx-font-#{$type}-line-height: #{$line-height};
@@ -18,4 +17,10 @@
 
   --cx-line-height-base: var.$line-height-base;
   --cx-line-height-headding: var.$headings-line-height;
+
+  // cx media component attributes
+  --cx-media-width: 100%;
+  --cx-media-height: 100%;
+  --cx-media-position: static;
+  --cx-media-object-fit: unset;
 }

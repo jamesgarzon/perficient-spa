@@ -69,6 +69,7 @@ import { PrfProductModule } from '@prf-features/product/prf-product.module';
 import { PrfCartModule } from '@prf-features/cart/prf-cart.module';
 import { PrfNewsModule } from '@prf-features/news/prf-news.module';
 import { PrfCmsComponentsModule } from './cms-components/prf-cms-components.module';
+import { PrfReferredCustomersFeatureModule } from '@prf-features/prf-referred-customers/prf-referred-customers-feature.module';
 
 @NgModule({
   declarations: [],
@@ -156,6 +157,7 @@ import { PrfCmsComponentsModule } from './cms-components/prf-cms-components.modu
     PrfProductModule,
     PrfCartModule,
     PrfNewsModule,
+    PrfReferredCustomersFeatureModule,
   ],
 })
 export class SpartacusFeaturesModule {}

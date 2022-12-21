@@ -1,0 +1,39 @@
+@use 'mixins';
+
+cx-card {
+  background: var(--cx-color-inverse);
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
+
+.empty-list {
+  background: var(--cx-color-background);
+  color: var(--cx-color-light);
+  font-weight: var(--cx-font-weight-semi);
+  padding: var(--cx-spatial-lg);
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-gap: var(--cx-spatial-md);
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@include mixins.cx-media-breakpoint-up(md) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@include mixins.cx-media-breakpoint-up(lg) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

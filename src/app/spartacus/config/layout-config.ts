@@ -10,7 +10,7 @@
  * Spartacus sample-data, you will have an aligned setup. However, if you introduce custom page
  * templates and/or slots, you most likely need to further adjust or replace this configuration.
  */
-import { LayoutConfig } from '@spartacus/storefront';
+import { DIALOG_TYPE, LayoutConfig, SpinnerComponent } from '@spartacus/storefront';
 import { DeferLoadingStrategy } from '@spartacus/core';
 
 export const prfLayoutConfig: LayoutConfig = {
@@ -100,6 +100,13 @@ export const prfLayoutConfig: LayoutConfig = {
     lg: 1200,
     xl: {
       min: 1200,
+    },
+  },
+  launch: {
+    FULLSCREEN_SPINNER: {
+      inlineRoot: true,
+      component: SpinnerComponent,
+      dialogType: DIALOG_TYPE.POPOVER_CENTER_BACKDROP,
     },
   },
 };

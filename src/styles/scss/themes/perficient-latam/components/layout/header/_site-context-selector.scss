@@ -6,7 +6,7 @@
       background-color: var(--cx-color-secondary);
       color: inherit;
 
-      @include mixins.cx-media-breakpoint-down(lg) {
+      @include mixins.cx-media-breakpoint-down(md) {
         background-color: var(--cx-color-light);
       }
     }

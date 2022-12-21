@@ -21,7 +21,7 @@
           "warn",
           {
             "type": "attribute",
-            "prefix": ["cx", "app"],
+            "prefix": ["cx", "prf"],
             "style": "camelCase"
           }
         ],
@@ -29,7 +29,7 @@
           "error",
           {
             "type": ["element", "attribute"],
-            "prefix": ["cx", "app"],
+            "prefix": ["cx", "prf"],
             "style": "kebab-case"
           }
         ]

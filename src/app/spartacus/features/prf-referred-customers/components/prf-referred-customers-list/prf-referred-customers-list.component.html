@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>{{ 'referredCustomers.title' | cxTranslate }}</h2>
+
+  <ng-container *ngIf="referredCustomersState$ | async as referredCustomersState">
+    <ng-container *ngIf="referredCustomersState.loading; then loading"></ng-container>
+    <ng-container *ngIf="referredCustomersState.data; then listContent"></ng-container>
+  </ng-container>
+</div>
+
+<ng-template #listContent let-referredCustomers>
+  <div class="cards-container">
+    <cx-card
+      *ngFor="let referredCustomer of referredCustomers"
+      [border]="true"
+      [fitToContainer]="true"
+      [content]="(getCardContent(referredCustomer) | async) || {}"
+      (deleteCard)="deleteReferredCustomer(referredCustomer.email)"
+    ></cx-card>
+  </div>
+
+  <p *ngIf="!referredCustomers.length" class="empty-list">{{ 'referredCustomers.list.empty' | cxTranslate }}</p>
+</ng-template>
+
+<ng-template #loading>
+  <cx-spinner></cx-spinner>
+</ng-template>
